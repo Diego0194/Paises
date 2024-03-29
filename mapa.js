@@ -17,7 +17,7 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 
 // Lista de códigos ISO de países para colorear
-var countriesToColor = ["MYS", "FR1"]; // Ejemplo: Estados Unidos
+var countriesToColor = ["MY", "FR"]; // Ejemplo: Estados Unidos
 
 // Función para determinar si un país debe estar coloreado
 function shouldColor(countryCode) {
@@ -69,8 +69,8 @@ d3.json("ne_110m_admin_0_countries.geojson")
       .attr("d", path)
       .attr("class", function(d) {
         // Verificar si d.properties está definido antes de acceder a sus propiedades
-        if (d.properties && d.properties.BRK_A3) {
-          var countryCode = d.properties.BRK_A3; // Acceder al código ISO del GeoJSON
+        if (d.properties && d.properties.ISO_A2_EH) {
+          var countryCode = d.properties.ISO_A2_EH; // Acceder al código ISO del GeoJSON
           var countryName = d.properties.NAME; // Obtener el nombre del país
           // Si el país está en la lista de países a colorear, asignar la clase "colored"
           return shouldColor(countryCode) ? "colored" : "";
@@ -79,8 +79,8 @@ d3.json("ne_110m_admin_0_countries.geojson")
       })
       .on("click", function(event, d) {
         // Abrir la lightbox solo si el país está en la lista de países a colorear
-        if (d.properties && d.properties.BRK_A3) {
-          var countryCode = d.properties.BRK_A3;
+        if (d.properties && d.properties.ISO_A2_EH) {
+          var countryCode = d.properties.ISO_A2_EH;
           var countryName = d.properties.NAME; // Obtener el nombre del país
           if (shouldColor(countryCode)) {
             openLightbox(countryCode, countryName);
