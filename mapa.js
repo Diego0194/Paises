@@ -44,7 +44,7 @@ function openLightbox(countryCode, countryName) {
 
   // Agregar la imagen del país a la polaroid
   polaroid.append("img")
-    .attr("src", "img/" + countryCode + ".jpg") // Ruta de la imagen del país
+    .attr("src", "img/" + countryCode + ".JPG") // Ruta de la imagen del país
     .attr("alt", countryCode);
 
   // Agregar el nombre del país en la parte inferior de la polaroid
