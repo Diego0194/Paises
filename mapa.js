@@ -17,7 +17,7 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 
 // Lista de códigos ISO de países para colorear
-var countriesToColor = ["MY","FR"]; // Ejemplo: Estados Unidos
+var countriesToColor = ["FR","GB","GE","MY","PT","TR"];
 
 // Función para determinar si un país debe estar coloreado
 function shouldColor(countryCode) {
