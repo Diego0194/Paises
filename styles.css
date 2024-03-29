@@ -1,0 +1,32 @@
+/* Estilos para la lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.polaroid {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.polaroid img {
+  max-width: 100%; /* Ajustar el ancho máximo al tamaño de la polaroid */
+  max-height: 100%; /* Ajustar la altura máxima al tamaño de la polaroid */
+  border-radius: 5px;
+}
+
+.polaroid .date {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: gray;
+}
